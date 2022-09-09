@@ -1,0 +1,158 @@
+/* Universal styles */
+
+/* font-family: 'Montserrat',
+sans-serif;
+font-family: 'Podkova',
+serif;
+font-family: 'Poppins',
+sans-serif;
+font-family: 'Redressed',
+cursive;
+ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Properties */
+
+:root {
+    --bg-color: #F3F3F3;
+}
+
+/* Global styles */
+
+
+html {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+body {
+    width: 100vw;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: var(--bg-color);
+}
+
+/* utility classes */
+.pad {
+    padding: 2rem;
+}
+
+.pad-horizontal {
+    padding: .5rem 1.5rem;
+}
+
+.pad-top {
+    padding: 2rem 0;
+}
+
+.pad-xs {
+    padding: .5rem;
+}
+
+.curve {
+    border-radius: 12px;
+}
+
+.curve-s {
+    border-radius: 5px;
+}
+
+.neumorphic {
+    background-color: var(--bg-color);
+    box-shadow: -5px -5px 8px #FFFFFF, 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.spaced-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 100%;
+    padding: 2rem;
+    display: inherit;
+    max-width: 600px;
+}
+
+.wrapper .logo {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.booking {
+    padding: 2rem 2rem 1rem;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.booking>div p {
+    color: #454545;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.booking__info,
+.booking__status {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(2, 1fr);
+}
+
+.booking__info>*:not(:last-child),
+.booking_status>*:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.booking__info>* {
+    height: 3rem;
+}
+
+.booking__info>div h3 {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'Podkova', sans-serif;
+    margin-bottom: .5rem;
+}
+
+.booking__status {
+    place-items: center;
+}
+
+.booking__status img:first-of-type {
+    justify-self: left;
+}
+
+.booking__status-confirm {
+    position: relative;
+    padding: 1rem 2rem;
+    border: 2px solid #55D278;
+}
+
+.booking__status-confirm div:first-of-type {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.booking__status-confirm h3 {
+    font-size: 1.25rem;
+    color: #55D278;
+    font-family: 'cabin sketch', 'sans-serif';
+    font-weight: bold;
+    text-align: center;
+}
