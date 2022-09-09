@@ -44,6 +44,10 @@ body {
 }
 
 /* utility classes */
+.text-center {
+    text-align: center;
+}
+
 .pad {
     padding: 2rem;
 }
@@ -54,6 +58,10 @@ body {
 
 .pad-top {
     padding: 2rem 0;
+}
+
+.pad-s {
+    padding: .75rem;
 }
 
 .pad-xs {
@@ -100,6 +108,7 @@ body {
 }
 
 .booking>div p {
+    max-width: 100%;
     color: #454545;
     font-size: 15px;
     font-weight: 600;
@@ -110,15 +119,12 @@ body {
 .booking__status {
     display: grid;
     grid-template-columns: 1.5fr repeat(2, 1fr);
+    gap: 1rem;
 }
 
-.booking__info>*:not(:last-child),
-.booking_status>*:not(:last-child) {
-    margin-right: 1rem;
-}
-
-.booking__info>* {
-    height: 3rem;
+.booking__info>div p {
+    height: 2rem;
+    line-height: 2rem;
 }
 
 .booking__info>div h3 {
@@ -126,6 +132,11 @@ body {
     font-weight: 800;
     font-family: 'Podkova', sans-serif;
     margin-bottom: .5rem;
+}
+
+.booking__info-slot h3+p {
+    font-size: 1.5rem;
+    color: #0095da;
 }
 
 .booking__status {
@@ -138,7 +149,7 @@ body {
 
 .booking__status-confirm {
     position: relative;
-    padding: 1rem 2rem;
+    padding: 1rem;
     border: 2px solid #55D278;
 }
 
